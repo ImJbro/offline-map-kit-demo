@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b1717"><title>U.S. Atlas · Offline Map Kit</title><link rel="stylesheet" href="./maplibre-gl.css"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./atlas.css"><script src="./maplibre-gl.js" defer></script><script src="./pmtiles.js" defer></script><script src="./shelters.js" defer></script><script src="./medical.js" defer></script><script src="./atlas.js" defer></script><body>
+<header class="masthead"><div><span class="eyebrow">PUBLIC CIVILIAN DEMO / 0.7</span><h1>U.S. Atlas</h1></div><a class="file" href="./">Local map &amp; waypoints</a></header>
+<section class="atlas-grid" aria-label="Atlas">
+<div><div id="atlas-map" role="region" aria-label="Interactive United States map"></div><p id="atlas-status" role="status">Opening the U.S. overview…</p></div>
+<aside class="panel">
+<h2>Coverage</h2>
+<div class="atlas-options"><button id="us">Lower 48</button><button id="ak">Alaska</button><button id="hi">Hawaii</button></div>
+<p>Overview: state lines, selected cities and interstates. Green states have optional street-detail packs.</p>
+<fieldset class="outdoor-options"><legend>Offline outdoor layers</legend>
+<label><input type="checkbox" id="show-shade"> Hill shading</label>
+<label><input type="checkbox" id="show-contours"> Elevation contours (500 ft)</label>
+<label><input type="checkbox" id="show-trails"> Public trails and parks</label>
+<div class="atlas-options"><button id="jump-beavercreek">Beavercreek trails</button><button id="jump-appalachia">Appalachian terrain</button></div>
+<p>Terrain covers the five detail states and surrounding areas. Highlights selected trails across the region and public park boundaries around Greene County. Check posted access rules and closures before visiting.</p>
+</fieldset>
+<p><a class="file" href="./outage-guide.html">Beavercreek outage guide</a></p>
+<fieldset class="outdoor-options" id="shelter-panel"><legend>Emergency shelters · U.S.</legend>
+<label><input type="checkbox" id="shelter-directory"> Offline planning directory</label>
+<p id="shelter-coverage">Locations are potential shelters, not confirmed open.</p>
+<div class="atlas-options"><button id="shelter-refresh" type="button">Check FEMA for open shelters</button></div>
+<p id="shelter-status" role="status">Live shelter status not checked.</p>
+<p id="shelter-detail" aria-live="polite">Select a pin for its name and address. Amber = planning only. Blue = reported open by FEMA.</p>
+<p><a href="https://www.redcross.org/get-help/disaster-relief-and-recovery-services/find-an-open-shelter.html">Red Cross open shelters</a>. Check local official instructions before traveling.</p>
+</fieldset>
+<fieldset class="outdoor-options"><legend>Hospitals · U.S.</legend>
+<label><input type="checkbox" id="medical-pins"> Major public-facing hospitals</label>
+<p id="medical-coverage">Purple pins mark hospital addresses. A directory entry does not confirm emergency services; check with the hospital.</p>
+<p>Tap a pin for the hospital name, address, and main phone when available. Call <a href="tel:911">911</a> for a life-threatening emergency.</p>
+</fieldset>
+<h2>Street-detail packs</h2>
+<label for="pack-select">State</label>
+<select id="pack-select"><option value="oh">Ohio</option><option value="wv">West Virginia</option><option value="va">Virginia</option><option value="pa">Pennsylvania</option><option value="nc">North Carolina</option></select>
+<p id="pack-note"></p>
+<div class="atlas-options"><button id="open-pack" class="primary">Open selected state</button><label class="file">Import PMTiles<input id="pack-file" type="file" accept=".pmtiles"></label><button id="remove-pack">Remove imported pack</button></div>
+<p>This demo does not host the full state packs. Download the desired file below and import it from Files. The atlas stores it in this browser if space permits. No live location, satellite imagery, or turn-by-turn directions here.</p>
+<p><a id="pack-download" href="https://github.com/actionstations-ai/maps/releases" target="_blank" rel="noopener">Get this state’s map file</a></p>
+</aside></section>
+</body></html>

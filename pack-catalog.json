@@ -1,0 +1,40 @@
+{
+  "release": "2026-11",
+  "assets": [
+    {
+      "code": "oh",
+      "name": "us-oh.pmtiles",
+      "size": 476150105,
+      "sha": "a2753e446624a01972b78e5d032da4e651555f06187ccd9e611e9f61e42f8c23",
+      "url": "https://github.com/actionstations-ai/maps/releases/download/2026-11/us-oh.pmtiles"
+    },
+    {
+      "code": "wv",
+      "name": "us-wv.pmtiles",
+      "size": 225704833,
+      "sha": "27d7b589a30dfddf85e47bfaf0b4857d3c1c934506f143486d9bf25f3af2bd15",
+      "url": "https://github.com/actionstations-ai/maps/releases/download/2026-11/us-wv.pmtiles"
+    },
+    {
+      "code": "va",
+      "name": "us-va.pmtiles",
+      "size": 487616532,
+      "sha": "71414f0a5fae3478b64f3d41aeebb296fbb5734125e3f322b28daa3153123033",
+      "url": "https://github.com/actionstations-ai/maps/releases/download/2026-11/us-va.pmtiles"
+    },
+    {
+      "code": "pa",
+      "name": "us-pa.pmtiles",
+      "size": 479758667,
+      "sha": "b441648194a54402c6b749ad61f040ab1bcdca0bd416d7cd6b06e50adca3a6a2",
+      "url": "https://github.com/actionstations-ai/maps/releases/download/2026-11/us-pa.pmtiles"
+    },
+    {
+      "code": "nc",
+      "name": "us-nc.pmtiles",
+      "size": 504787216,
+      "sha": "afb386b4643c59747a4b1077ec13f42b90b42367779f341cf057688ddf0fdc5d",
+      "url": "https://github.com/actionstations-ai/maps/releases/download/2026-11/us-nc.pmtiles"
+    }
+  ]
+}

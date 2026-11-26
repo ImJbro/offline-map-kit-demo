@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1717">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Offline Map Kit</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <div><span class="eyebrow">PUBLIC CIVILIAN DEMO / 0.7</span><h1>Offline Map Kit</h1></div>
+  <a class="file" href="./atlas.html">Open U.S. Atlas</a>
+  <p id="offline" role="status">Preparing offline storage.</p>
+<p>Independent offline navigation prototype. Not affiliated with the TAK Product Center.</p></header>
+<main>
+  <section class="workspace" aria-label="Map">
+    <div class="map">
+      <svg id="map" aria-label="Map with a geographic grid" role="img"></svg>
+      <div class="zoom">
+        <span class="north" aria-label="North is up">N <span aria-hidden="true">↑</span></span>
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+        <button id="zoom-out" aria-label="Zoom out">−</button>
+        <button id="fit">Fit map</button>
+      </div>
+      <span id="map-label">Fictional demo · Not for navigation</span>
+    </div>
+    <p id="legend" hidden>Gold: highways · Gray: major roads · Blue: waterways · Green: parks/trailheads · Dashes: 10-mile boundary</p>
+    <p id="center">Map center</p>
+    <div class="actions"><button id="locate">Find my GPS</button><button id="add" class="primary">Save map center</button></div>
+    <form id="waypoint-form" hidden><label for="name">Waypoint name</label><input id="name" required maxlength="60" autocomplete="off"><button type="submit">Save</button><button id="cancel" type="button">Cancel</button></form>
+    <p id="status" role="status">Drag to move the map. Use + or − to zoom.</p>
+  </section>
+  <div class="rail">
+    <section class="panel" aria-labelledby="waypoints-title">
+      <span class="eyebrow" aria-hidden="true">01 / SAVED PLACES</span>
+      <h2 id="waypoints-title">Waypoints</h2>
+      <ul id="points"></ul>
+      <button id="export">Export waypoints</button>
+      <p>Stored on this device. Export a backup before clearing browser data.</p>
+    </section>
+    <section class="panel" aria-labelledby="maps-title">
+      <span class="eyebrow" aria-hidden="true">02 / OFFLINE DATA</span>
+      <h2 id="maps-title">Map layers</h2>
+      <p>Open the bundled Beavercreek area or import your own GeoJSON. No live tiles required.</p>
+      <p><button id="beavercreek" class="primary">Open Beavercreek · 10 mi</button></p>
+      <div class="panel-actions"><label class="file">Import GeoJSON<input id="import" type="file" accept=".geojson,.json,application/geo+json,application/json"></label><button id="demo" class="quiet">Reset demo</button></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
