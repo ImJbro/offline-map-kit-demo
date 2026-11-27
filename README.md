@@ -15,3 +15,7 @@ Open the site online once before using it offline. On iPhone open it in Safari, 
 
 ## Deploy on GitHub Pages
 Use the contents of this folder at the root of a new public repository; do not include the private project's other files, test exports or personal data. In Settings > Pages choose Deploy from a branch, main, /(root), and Save.
+## Detailed map packs
+In the atlas, choose Ohio, West Virginia, Virginia, Pennsylvania, or North Carolina. Download that state's PMTiles to Files, then choose Import PMTiles in the app you plan to use offline. The five files total 2.17 GB and are not stored in this repository. Keep your original download and test in airplane mode before relying on it.
+
+To download all five archives on a computer, clone this repository and run 'node download-state-packs.cjs' with Node.js 22 or later. It checks file sizes and SHA-256 against pack-catalog.json. Use '--verify-only' to check installed copies without downloading. Browser imports do not perform those checks.

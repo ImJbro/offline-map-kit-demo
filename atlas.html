@@ -6,6 +6,14 @@
 <h2>Coverage</h2>
 <div class="atlas-options"><button id="us">Lower 48</button><button id="ak">Alaska</button><button id="hi">Hawaii</button></div>
 <p>Overview: state lines, selected cities and interstates. Green states have optional street-detail packs.</p>
+<section id="detail-packs" aria-labelledby="detail-heading"><h2 id="detail-heading">Street-detail packs</h2><p>Choose a state, download its map to Files, then import it below.</p>
+<label for="pack-select">State</label>
+<select id="pack-select"><option value="oh">Ohio</option><option value="wv">West Virginia</option><option value="va">Virginia</option><option value="pa">Pennsylvania</option><option value="nc">North Carolina</option></select>
+<p id="pack-note"></p>
+<div class="atlas-options"><button id="open-pack" class="primary">Open selected state</button><label class="file">Import PMTiles<input id="pack-file" type="file" accept=".pmtiles"></label><button id="remove-pack">Remove imported pack</button></div>
+<p>On iPhone, open the Home Screen app before importing if that is where you will use the map. Keep the original download and test a cold launch in airplane mode with Wi-Fi off.</p>
+<p><a id="pack-download" href="https://github.com/actionstations-ai/maps/releases/download/2026-11/us-oh.pmtiles" target="_blank" rel="noopener">Get this state’s map file</a></p>
+</section>
 <fieldset class="outdoor-options"><legend>Offline outdoor layers</legend>
 <label><input type="checkbox" id="show-shade"> Hill shading</label>
 <label><input type="checkbox" id="show-contours"> Elevation contours (500 ft)</label>
@@ -27,12 +35,5 @@
 <p id="medical-coverage">Purple pins mark hospital addresses. A directory entry does not confirm emergency services; check with the hospital.</p>
 <p>Tap a pin for the hospital name, address, and main phone when available. Call <a href="tel:911">911</a> for a life-threatening emergency.</p>
 </fieldset>
-<h2>Street-detail packs</h2>
-<label for="pack-select">State</label>
-<select id="pack-select"><option value="oh">Ohio</option><option value="wv">West Virginia</option><option value="va">Virginia</option><option value="pa">Pennsylvania</option><option value="nc">North Carolina</option></select>
-<p id="pack-note"></p>
-<div class="atlas-options"><button id="open-pack" class="primary">Open selected state</button><label class="file">Import PMTiles<input id="pack-file" type="file" accept=".pmtiles"></label><button id="remove-pack">Remove imported pack</button></div>
-<p>This demo does not host the full state packs. Download the desired file below and import it from Files. The atlas stores it in this browser if space permits. No live location, satellite imagery, or turn-by-turn directions here.</p>
-<p><a id="pack-download" href="https://github.com/actionstations-ai/maps/releases" target="_blank" rel="noopener">Get this state’s map file</a></p>
 </aside></section>
 </body></html>
